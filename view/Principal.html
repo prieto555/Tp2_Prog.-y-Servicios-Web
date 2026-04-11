@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo - Mega Menú</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="contenedor-nav">
+            <div class="logo"><img src="../assets/img/logo.jpg" alt="Logo de Turismo"></div>
+            
+            <!-- Checkbox oculto para controlar el menú (CSS puro) -->
+            <input type="checkbox" id="menuToggle" class="menu-toggle">
+            
+            <!-- Label que actúa como botón hamburguesa -->
+            <label for="menuToggle" class="menu-hamburguesa">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <!-- Navegación responsive -->
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="Principal.html">Inicio</a></li>
+                    <li><a href="Destinos.html">Destinos</a></li>
+                    <li><a href="Agencias.html">Agencias</a></li>
+                    <li><a href="Precios.html">Precios</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Video de fondo con autoplay, loop y sin controles -->
+        <video 
+            class="video-background" 
+            autoplay 
+            loop 
+            muted 
+            playsinline
+            disablepictureinpicture
+            disableremoteplayback>
+            <source src="https://www.elcalafate.tur.ar/img/img-bnn/timelaps.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento video.
+        </video>
+        
+        <section class="hero">
+            <h1 class="h1">Página principal de turismo</h1>
+            <p class="text-base">Este ejemplo muestra un header con mega menú desplegable hecho con HTML y CSS.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p class="text-sm">&copy; 2024 Turismo. Todos los derechos reservados.</p>
+            <ul>
+                <li class="text-sm"><a href="#">Política de Privacidad</a></li>
+                <li class="text-sm"><a href="#">Términos y Condiciones</a></li>
+                <li class="text-sm"><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
