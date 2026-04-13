@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="contenedor-nav">
+            <div class="logo"><img src="../assets/img/logo.jpg" alt="Logo de Turismo"></div>
+            
+            <!-- Checkbox oculto para controlar el menu (CSS puro) -->
+            <input type="checkbox" id="menuToggle" class="menu-toggle">
+            
+            <!-- Label que actua como boton hamburguesa -->
+            <label for="menuToggle" class="menu-hamburguesa">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <!-- Navegacion responsive -->
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="Principal.html">Inicio</a></li>
+                    <li><a href="Destinos.html">Destinos</a></li>
+                    <li><a href="Agencias.html">Agencias</a></li>
+                    <li><a href="Precios.html">Precios</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="contenido blog-page">
+            <div class="section-container">
+                <div class="blog-hero-head">
+                    <h1 class="h1">Blog de Destinos</h1>
+                    <p class="text-base section-intro">Una mirada editorial sobre viajes, experiencias y rincones para descubrir. Explora notas destacadas, categorias y comentarios en un formato tipo revista.</p>
+                </div>
+
+                <div class="blog-filtros">
+                    <input type="radio" name="blog-filtro" id="blog-todos" checked>
+                    <input type="radio" name="blog-filtro" id="blog-cultural">
+                    <input type="radio" name="blog-filtro" id="blog-aventura">
+                    <input type="radio" name="blog-filtro" id="blog-gastro">
+                    <input type="radio" name="blog-filtro" id="blog-relax">
+
+                    <div class="blog-tags">
+                        <label for="blog-todos">Todas</label>
+                        <label for="blog-cultural">Cultural</label>
+                        <label for="blog-aventura">Aventura</label>
+                        <label for="blog-gastro">Gastronomia</label>
+                        <label for="blog-relax">Relax</label>
+                    </div>
+
+                    <div class="blog-grid">
+                        <article class="blog-card blog-lead blog-cultural blog-reveal">
+                            <img src="https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?auto=format&fit=crop&w=1200&q=80" alt="Ciudad y arquitectura cultural">
+                            <div class="blog-card-content">
+                                <span class="blog-chip text-sm">Cultural</span>
+                                <h2 class="h2">48 horas en una capital llena de historia, arte y cafe</h2>
+                                <p class="text-base">Un recorrido editorial por barrios, museos y espacios que hacen del viaje una experiencia urbana intensa y memorable.</p>
+                            </div>
+                        </article>
+
+                        <article class="blog-card blog-aventura blog-reveal">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Bosque y sendero de aventura">
+                            <div class="blog-card-content">
+                                <span class="blog-chip text-sm">Aventura</span>
+                                <h3 class="h4">Senderos que cambian con la luz del dia</h3>
+                                <p class="text-sm">Lagos, bosques y rutas escenicas para una escapada activa.</p>
+                            </div>
+                        </article>
+
+                        <article class="blog-card blog-gastro blog-reveal">
+                            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Mesa con platos gastronomicos">
+                            <div class="blog-card-content">
+                                <span class="blog-chip text-sm">Gastronomia</span>
+                                <h3 class="h4">Sabores regionales que justifican el viaje</h3>
+                                <p class="text-sm">Restaurantes, mercados y bodegas para descubrir con tiempo.</p>
+                            </div>
+                        </article>
+
+                        <article class="blog-card blog-relax blog-reveal">
+                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Playa tranquila para descansar">
+                            <div class="blog-card-content">
+                                <span class="blog-chip text-sm">Relax</span>
+                                <h3 class="h4">Playas tranquilas para desconectar sin apuro</h3>
+                                <p class="text-sm">Un itinerario sereno para bajar el ritmo y descansar.</p>
+                            </div>
+                        </article>
+
+                        <article class="blog-card blog-cultural blog-gastro blog-reveal">
+                            <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=900&q=80" alt="Ciudad al atardecer">
+                            <div class="blog-card-content">
+                                <span class="blog-chip text-sm">Cultural y gastronomia</span>
+                                <h3 class="h4">Una ciudad para caminar, mirar y probar</h3>
+                                <p class="text-sm">Calles con historia, arquitectura y cocina local en cada esquina.</p>
+                            </div>
+                        </article>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-comments-section">
+            <div class="section-container">
+                <h2 class="h2">Comentarios de lectores</h2>
+                <p class="text-base section-intro">Opiniones y recomendaciones de viajeros que siguen el blog y comparten ideas para futuros recorridos.</p>
+
+                <div class="blog-comments">
+                    <article class="blog-comment">
+                        <div class="blog-avatar avatar-aurora"></div>
+                        <div class="blog-comment-body">
+                            <h3 class="h6">Aurora L.</h3>
+                            <p class="text-sm">La nota sobre rutas culturales me dio varias ideas para mi proximo viaje. Me gusto mucho el enfoque visual y la seleccion de lugares.</p>
+                        </div>
+                    </article>
+
+                    <article class="blog-comment">
+                        <div class="blog-avatar avatar-marco"></div>
+                        <div class="blog-comment-body">
+                            <h3 class="h6">Marco T.</h3>
+                            <p class="text-sm">Estaria bueno sumar mas articulos de trekking. La seccion de aventura ya se siente muy bien curada.</p>
+                        </div>
+                    </article>
+
+                    <article class="blog-comment">
+                        <div class="blog-avatar avatar-lina"></div>
+                        <div class="blog-comment-body">
+                            <h3 class="h6">Lina P.</h3>
+                            <p class="text-sm">Me encanto el estilo revista. Los textos se leen rapido y las categorias ayudan mucho a encontrar algo segun el plan de viaje.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-newsletter">
+                <h3 class="h5">Suscribete al newsletter</h3>
+                <p class="text-sm">Recibe novedades, ofertas y recomendaciones de destinos para tu proximo viaje.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electronico" aria-label="Correo electronico">
+                    <button type="submit">Suscribirme</button>
+                </form>
+            </div>
+
+            <div class="footer-social">
+                <h3 class="h5">Siguenos</h3>
+                <ul class="social-links">
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                    <li><a href="https://www.x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+                </ul>
+
+                <ul class="footer-links">
+                    <li class="text-sm"><a href="#">Politica de Privacidad</a></li>
+                    <li class="text-sm"><a href="#">Terminos y Condiciones</a></li>
+                    <li class="text-sm"><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-map">
+                <h3 class="h5">Encuentranos</h3>
+                <div class="map-embed">
+                    <iframe
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-58.405%2C-34.615%2C-58.365%2C-34.585&layer=mapnik&marker=-34.6%2C-58.385"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa de ubicacion">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <h3 class="h5">Informacion</h3>
+                <p class="text-sm">&copy; 2024 Turismo. Todos los derechos reservados.</p>
+                <p class="text-sm">Inspiramos viajes, conectamos destinos y acercamos nuevas experiencias para cada viajero.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

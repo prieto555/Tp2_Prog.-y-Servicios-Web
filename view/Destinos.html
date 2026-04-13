@@ -9,45 +9,275 @@
 <body>
     <header>
         <div class="contenedor-nav">
-            <div class="logo">Turismo</div>
+            <div class="logo"><img src="../assets/img/logo.jpg" alt="Logo de Turismo"></div>
             
-            <!-- Checkbox oculto para controlar el menú (CSS puro) -->
+            <!-- Checkbox oculto para controlar el menu (CSS puro) -->
             <input type="checkbox" id="menuToggle" class="menu-toggle">
             
-            <!-- Label que actúa como botón hamburguesa -->
+            <!-- Label que actua como boton hamburguesa -->
             <label for="menuToggle" class="menu-hamburguesa">
                 <span></span>
                 <span></span>
                 <span></span>
             </label>
             
-            <!-- Navegación responsive -->
+            <!-- Navegacion responsive -->
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="Principal.html">Principal</a></li>
+                    <li><a href="Principal.html">Inicio</a></li>
                     <li><a href="Destinos.html">Destinos</a></li>
                     <li><a href="Agencias.html">Agencias</a></li>
                     <li><a href="Precios.html">Precios</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     
     <main>
-        <section class="contenido">
-            <h1 class="h1">Destinos</h1>
-            <!-- Contenido de los destinos irá aquí -->
+        <section class="contenido destinos-page">
+            <div class="section-container">
+                <h1 class="h1">Destinos</h1>
+                <p class="text-base section-intro">Explora propuestas pensadas para distintos estilos de viaje, con filtros por categoria, una galeria visual y una tabla comparativa para organizar mejor tu proxima salida.</p>
+
+                <div class="destinos-filtros">
+                    <input type="radio" name="categoria-destino" id="filtro-todos" checked>
+                    <input type="radio" name="categoria-destino" id="filtro-cultural">
+                    <input type="radio" name="categoria-destino" id="filtro-naturaleza">
+                    <input type="radio" name="categoria-destino" id="filtro-sol">
+                    <input type="radio" name="categoria-destino" id="filtro-gastronomico">
+                    <input type="radio" name="categoria-destino" id="filtro-religioso">
+
+                    <div class="filtros-chips">
+                        <label for="filtro-todos">Todos</label>
+                        <label for="filtro-cultural">Cultural</label>
+                        <label for="filtro-naturaleza">Naturaleza</label>
+                        <label for="filtro-sol">Sol y playa</label>
+                        <label for="filtro-gastronomico">Gastronomico</label>
+                        <label for="filtro-religioso">Religioso</label>
+                    </div>
+
+                    <div class="destinos-grid">
+                        <article class="destino-item categoria-cultural">
+                            <div class="destino-card destino-card-overlay">
+                                <img src="https://images.unsplash.com/photo-1516306580123-e6e52b1b7b5f?auto=format&fit=crop&w=900&q=80" alt="Arquitectura historica en Buenos Aires">
+                                <div class="destino-card-content">
+                                    <h3 class="h4">Buenos Aires</h3>
+                                    <p class="text-sm">Teatros, barrios emblematicos y una agenda cultural siempre activa.</p>
+                                </div>
+                                <div class="destino-overlay">
+                                    <span class="text-sm destino-tag">Cultural</span>
+                                    <p class="text-sm">Ideal para recorrer museos, arquitectura y vida urbana.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="destino-item categoria-naturaleza">
+                            <div class="destino-card destino-card-overlay">
+                                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Lago y montanas en la Patagonia">
+                                <div class="destino-card-content">
+                                    <h3 class="h4">Patagonia</h3>
+                                    <p class="text-sm">Senderos, glaciares y postales inmensas para una escapada natural.</p>
+                                </div>
+                                <div class="destino-overlay">
+                                    <span class="text-sm destino-tag">Naturaleza</span>
+                                    <p class="text-sm">Perfecto para trekking, paisajes y aventura al aire libre.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="destino-item categoria-sol">
+                            <div class="destino-card destino-card-overlay">
+                                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Playa con arena clara y mar azul">
+                                <div class="destino-card-content">
+                                    <h3 class="h4">Costa Atlantica</h3>
+                                    <p class="text-sm">Playas amplias, relax frente al mar y opciones para toda la familia.</p>
+                                </div>
+                                <div class="destino-overlay">
+                                    <span class="text-sm destino-tag">Sol y playa</span>
+                                    <p class="text-sm">Una propuesta clasica para descansar con vista al mar.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="destino-item categoria-gastronomico">
+                            <div class="destino-card destino-card-overlay">
+                                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Mesa con platos regionales y copas">
+                                <div class="destino-card-content">
+                                    <h3 class="h4">Mendoza</h3>
+                                    <p class="text-sm">Vinos, restaurantes de autor y experiencias entre bodegas.</p>
+                                </div>
+                                <div class="destino-overlay">
+                                    <span class="text-sm destino-tag">Gastronomico</span>
+                                    <p class="text-sm">Pensado para degustaciones, maridajes y cocina regional.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="destino-item categoria-religioso">
+                            <div class="destino-card destino-card-overlay">
+                                <img src="https://images.unsplash.com/photo-1524499982521-1ffd58dd89ea?auto=format&fit=crop&w=900&q=80" alt="Basílica e iglesia con peregrinos">
+                                <div class="destino-card-content">
+                                    <h3 class="h4">Lujan</h3>
+                                    <p class="text-sm">Tradicion, peregrinaciones y espacios de gran valor espiritual.</p>
+                                </div>
+                                <div class="destino-overlay">
+                                    <span class="text-sm destino-tag">Religioso</span>
+                                    <p class="text-sm">Un destino sereno para encuentros, fe y patrimonio religioso.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="destino-item categoria-naturaleza categoria-cultural">
+                            <div class="destino-card destino-card-overlay">
+                                <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=900&q=80" alt="Montanas coloridas del norte argentino">
+                                <div class="destino-card-content">
+                                    <h3 class="h4">Norte Argentino</h3>
+                                    <p class="text-sm">Colores intensos, pueblos historicos y paisajes unicos del altiplano.</p>
+                                </div>
+                                <div class="destino-overlay">
+                                    <span class="text-sm destino-tag">Naturaleza y cultural</span>
+                                    <p class="text-sm">Combina rutas escenicas, historia local y tradiciones vivas.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="destinos-galeria">
+            <div class="section-container">
+                <h2 class="h2">Galeria inspiracion</h2>
+                <p class="text-base section-intro">Una seleccion visual con formatos de diferentes alturas para transmitir el ritmo y la variedad de cada destino.</p>
+
+                <div class="masonry-grid">
+                    <figure class="masonry-item masonry-tall">
+                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80" alt="Camino de montana y lago">
+                    </figure>
+                    <figure class="masonry-item">
+                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Bosque y sendero natural">
+                    </figure>
+                    <figure class="masonry-item masonry-wide">
+                        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=900&q=80" alt="Ciudad iluminada al atardecer">
+                    </figure>
+                    <figure class="masonry-item masonry-tall">
+                        <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=900&q=80" alt="Mar y playa con arena clara">
+                    </figure>
+                    <figure class="masonry-item">
+                        <img src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?auto=format&fit=crop&w=900&q=80" alt="Mesa de comida regional">
+                    </figure>
+                    <figure class="masonry-item">
+                        <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=80" alt="Iglesia historica y plaza">
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="destinos-tabla-section">
+            <div class="section-container">
+                <h2 class="h2">Precios orientativos</h2>
+                <p class="text-base section-intro">Comparacion rapida de algunos destinos destacados con categoria, duracion sugerida y precio estimado por persona.</p>
+
+                <div class="tabla-responsive">
+                    <table class="tabla-destinos">
+                        <thead>
+                            <tr>
+                                <th>Destino</th>
+                                <th>Categoria</th>
+                                <th>Duracion</th>
+                                <th>Temporada ideal</th>
+                                <th>Precio desde</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Destino">Buenos Aires</td>
+                                <td data-label="Categoria">Cultural</td>
+                                <td data-label="Duracion">3 dias</td>
+                                <td data-label="Temporada ideal">Todo el ano</td>
+                                <td data-label="Precio desde">$180.000</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Destino">Patagonia</td>
+                                <td data-label="Categoria">Naturaleza</td>
+                                <td data-label="Duracion">5 dias</td>
+                                <td data-label="Temporada ideal">Octubre a marzo</td>
+                                <td data-label="Precio desde">$420.000</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Destino">Costa Atlantica</td>
+                                <td data-label="Categoria">Sol y playa</td>
+                                <td data-label="Duracion">4 dias</td>
+                                <td data-label="Temporada ideal">Diciembre a febrero</td>
+                                <td data-label="Precio desde">$230.000</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Destino">Mendoza</td>
+                                <td data-label="Categoria">Gastronomico</td>
+                                <td data-label="Duracion">4 dias</td>
+                                <td data-label="Temporada ideal">Marzo a mayo</td>
+                                <td data-label="Precio desde">$310.000</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Destino">Lujan</td>
+                                <td data-label="Categoria">Religioso</td>
+                                <td data-label="Duracion">2 dias</td>
+                                <td data-label="Temporada ideal">Abril a noviembre</td>
+                                <td data-label="Precio desde">$95.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </section>
     </main>
     
     <footer>
         <div class="footer-content">
-            <p class="text-sm">&copy; 2024 Turismo. Todos los derechos reservados.</p>
-            <ul>
-                <li><a href="#">Política de Privacidad</a></li>
-                <li><a href="#">Términos y Condiciones</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
+            <div class="footer-newsletter">
+                <h3 class="h5">Suscribete al newsletter</h3>
+                <p class="text-sm">Recibe novedades, ofertas y recomendaciones de destinos para tu proximo viaje.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electronico" aria-label="Correo electronico">
+                    <button type="submit">Suscribirme</button>
+                </form>
+            </div>
+
+            <div class="footer-social">
+                <h3 class="h5">Siguenos</h3>
+                <ul class="social-links">
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                    <li><a href="https://www.x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+                </ul>
+
+                <ul class="footer-links">
+                    <li class="text-sm"><a href="#">Politica de Privacidad</a></li>
+                    <li class="text-sm"><a href="#">Terminos y Condiciones</a></li>
+                    <li class="text-sm"><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-map">
+                <h3 class="h5">Encuentranos</h3>
+                <div class="map-embed">
+                    <iframe
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-58.405%2C-34.615%2C-58.365%2C-34.585&layer=mapnik&marker=-34.6%2C-58.385"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa de ubicacion">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <h3 class="h5">Informacion</h3>
+                <p class="text-sm">&copy; 2024 Turismo. Todos los derechos reservados.</p>
+                <p class="text-sm">Inspiramos viajes, conectamos destinos y acercamos nuevas experiencias para cada viajero.</p>
+            </div>
         </div>
     </footer>
 </body>
