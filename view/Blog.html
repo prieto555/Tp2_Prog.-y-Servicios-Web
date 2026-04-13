@@ -32,14 +32,14 @@
                     <li><a href="Contacto.html">Contacto</a></li>
                 </ul>
             </nav>
+            <button type="button" class="theme-toggle" id="dark-mode-toggle" aria-pressed="false" aria-label="Activar modo oscuro">Modo oscuro</button>
             
-            <!-- Botón Dark Mode -->
-            <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Alternar modo oscuro">🌙</button>
+        
         </div>
     </header>
     
     <main>
-        <section class="contenido blog-page">
+        <section class="contenido ">
             <div class="section-container">
                 <div class="blog-hero-head">
                     <h1 class="h1">Blog de Destinos</h1>
@@ -113,7 +113,7 @@
             </div>
         </section>
 
-        <section class="blog-comments-section">
+        <section class="">
             <div class="section-container">
                 <h2 class="h2">Comentarios de lectores</h2>
                 <p class="text-base section-intro">Opiniones y recomendaciones de viajeros que siguen el blog y comparten ideas para futuros recorridos.</p>
@@ -122,7 +122,7 @@
                     <article class="blog-comment">
                         <div class="blog-avatar avatar-aurora"></div>
                         <div class="blog-comment-body">
-                            <h3 class="h6">Aurora L.</h3>
+                            <span class="">Aurora L.</span>
                             <p class="text-sm">La nota sobre rutas culturales me dio varias ideas para mi proximo viaje. Me gusto mucho el enfoque visual y la seleccion de lugares.</p>
                         </div>
                     </article>
@@ -130,7 +130,7 @@
                     <article class="blog-comment">
                         <div class="blog-avatar avatar-marco"></div>
                         <div class="blog-comment-body">
-                            <h3 class="h6">Marco T.</h3>
+                            <span class="">Marco T.</span>
                             <p class="text-sm">Estaria bueno sumar mas articulos de trekking. La seccion de aventura ya se siente muy bien curada.</p>
                         </div>
                     </article>
@@ -138,7 +138,7 @@
                     <article class="blog-comment">
                         <div class="blog-avatar avatar-lina"></div>
                         <div class="blog-comment-body">
-                            <h3 class="h6">Lina P.</h3>
+                            <span class="">Lina P.</span>
                             <p class="text-sm">Me encanto el estilo revista. Los textos se leen rapido y las categorias ayudan mucho a encontrar algo segun el plan de viaje.</p>
                         </div>
                     </article>
@@ -194,7 +194,8 @@
         </div>
     </footer>
 
-    <script>
+    <script src="../js/dark-mode.js"></script>
+    <!--
         const toggle = document.getElementById('dark-mode-toggle');
         const body = document.body;
         
@@ -211,7 +212,7 @@
             toggle.textContent = isDark ? '☀️' : '🌙';
             localStorage.setItem('dark-mode', isDark ? 'enabled' : 'disabled');
         });
-    </script>
+    -->
 
 </body>
 </html>
