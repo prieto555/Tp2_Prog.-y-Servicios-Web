@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turismo - Mega Menú</title>
+    <title>Turismo - Mega Menu</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -12,23 +12,24 @@
         <div class="contenedor-nav">
             <div class="logo"><img src="../assets/img/logo.jpg" alt="Logo de Turismo"></div>
             
-            <!-- Checkbox oculto para controlar el menú (CSS puro) -->
+            <!-- Checkbox oculto para controlar el menu (CSS puro) -->
             <input type="checkbox" id="menuToggle" class="menu-toggle">
             
-            <!-- Label que actúa como botón hamburguesa -->
+            <!-- Label que actua como boton hamburguesa -->
             <label for="menuToggle" class="menu-hamburguesa">
                 <span></span>
                 <span></span>
                 <span></span>
             </label>
             
-            <!-- Navegación responsive -->
+            <!-- Navegacion responsive -->
             <nav class="nav-menu">
                 <ul>
                     <li><a href="Principal.html">Inicio</a></li>
                     <li><a href="Destinos.html">Destinos</a></li>
                     <li><a href="Agencias.html">Agencias</a></li>
                     <li><a href="Precios.html">Precios</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
                     <li><a href="Contacto.html">Contacto</a></li>
                 </ul>
             </nav>
@@ -36,33 +37,205 @@
     </header>
 
     <main>
-        <!-- Video de fondo con autoplay, loop y sin controles -->
-        <video 
-            class="video-background" 
-            autoplay 
-            loop 
-            muted 
-            playsinline
-            disablepictureinpicture
-            disableremoteplayback>
-            <source src="https://www.elcalafate.tur.ar/img/img-bnn/timelaps.mp4" type="video/mp4">
-            Tu navegador no soporta el elemento video.
-        </video>
-        
         <section class="hero">
-            <h1 class="h1">Página principal de turismo</h1>
-            <p class="text-base">Este ejemplo muestra un header con mega menú desplegable hecho con HTML y CSS.</p>
+            <!-- Video de fondo con autoplay, loop y sin controles -->
+            <video
+                class="video-background"
+                autoplay
+                loop
+                muted
+                playsinline
+                disablepictureinpicture
+                disableremoteplayback>
+                <source src="https://www.elcalafate.tur.ar/img/img-bnn/timelaps.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento video.
+            </video>
+
+            <div class="video-content">
+                <h1 class="h1">Descubre destinos unicos para tu proxima aventura</h1>
+                <p class="text-base">Explora paisajes inolvidables, experiencias nuevas y lugares pensados para cada tipo de viajero.</p>
+                <a href="Destinos.html" class="btn-hero">Ver destinos</a>
+            </div>
+        </section>
+
+        <section class="destacados">
+            <div class="section-container">
+                <h2 class="h2">Destinos destacados</h2>
+                <p class="text-base section-intro">Una seleccion pensada para viajeros que buscan naturaleza, cultura y experiencias memorables.</p>
+
+                <div class="destacados-grid">
+                    <article class="destino-card">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Paisaje de montanas y lago en la Patagonia">
+                        <div class="destino-card-content">
+                            <h3 class="h4">Patagonia</h3>
+                            <p class="text-sm">Glaciares, senderos y panoramas inmensos para una escapada inolvidable.</p>
+                        </div>
+                    </article>
+
+                    <article class="destino-card">
+                        <img src="https://media.todojujuy.com/p/68dd7f953ad2426be7d2b35cd547064c/adjuntos/227/imagenes/001/353/0001353180/jujuy-y-el-turismo.jpg" alt="Cataratas rodeadas de selva en Iguazu">
+                        <div class="destino-card-content">
+                            <h3 class="h4">Norte</h3>
+                            <p class="text-sm">Pueblos coloridos con paisajes únicos y una ricos tradición cultural.</p>
+                        </div>
+                    </article>
+
+                    <article class="destino-card">
+                        <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=900&q=80" alt="Montanas de colores en el norte argentino">
+                        <div class="destino-card-content">
+                            <h3 class="h4">Cuyo Argentino</h3>
+                            <p class="text-sm">Zonas vitivinícolas con paisajes espectaculares y una rica tradición en la producción de vinos.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contador-section">
+            <div class="section-container contador-container">
+                <div class="contador-grid">
+                    <div class="contador-card">
+                        <p class="text-sm contador-label">Viajeros felices</p>
+                        <div class="contador-animado">
+                            <span class="contador-numero">500</span><span class="contador-sufijo">+</span>
+                        </div>
+                        <p class="text-base">Personas que ya eligieron nuevas experiencias con nosotros.</p>
+                    </div>
+
+                    <div class="contador-card">
+                        <p class="text-sm contador-label">Destinos disponibles</p>
+                        <div class="contador-animado">
+                            <span class="contador-numero">120</span><span class="contador-sufijo">+</span>
+                        </div>
+                        <p class="text-base">Opciones para escapadas, aventuras y viajes inolvidables.</p>
+                    </div>
+
+                    <div class="contador-card">
+                        <p class="text-sm contador-label">Agencias asociadas</p>
+                        <div class="contador-animado">
+                            <span class="contador-numero">80</span><span class="contador-sufijo">+</span>
+                        </div>
+                        <p class="text-base">Aliados que te ayudan a planificar cada detalle del recorrido.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonios">
+            <div class="section-container">
+                <h2 class="h2">Testimonios</h2>
+                <p class="text-base section-intro">Historias reales de viajeros que encontraron inspiracion, organizacion y destinos inolvidables para su proxima escapada.</p>
+
+                <div class="testimonios-carrusel">
+                    <input type="radio" name="testimonio-slide" id="testimonio-1" checked>
+                    <input type="radio" name="testimonio-slide" id="testimonio-2">
+                    <input type="radio" name="testimonio-slide" id="testimonio-3">
+
+                    <div class="testimonios-track">
+                        <article class="testimonio-card">
+                            <p class="text-base">"La experiencia fue excelente. Todo estuvo muy bien organizado y los paisajes fueron increibles."</p>
+                            <div class="testimonio-persona">
+                                <img src="https://i.pravatar.cc/120?img=32" alt="Foto de perfil de Lucia">
+                                <div>
+                                    <h3 class="h6">Lucia M.</h3>
+                                    <p class="text-sm">Viajera frecuente</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="testimonio-card">
+                            <p class="text-base">"Encontramos destinos hermosos y una propuesta clara para planear nuestro viaje sin complicaciones."</p>
+                            <div class="testimonio-persona">
+                                <img src="https://i.pravatar.cc/120?img=15" alt="Foto de perfil de Martin">
+                                <div>
+                                    <h3 class="h6">Martin R.</h3>
+                                    <p class="text-sm">Amante de la aventura</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="testimonio-card">
+                            <p class="text-base">"El sitio inspira a viajar. Las recomendaciones y la presentacion de cada lugar nos encantaron."</p>
+                            <div class="testimonio-persona">
+                                <img src="https://i.pravatar.cc/120?img=47" alt="Foto de perfil de Camila">
+                                <div>
+                                    <h3 class="h6">Camila P.</h3>
+                                    <p class="text-sm">Exploradora cultural</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="testimonios-arrows arrows-slide-1">
+                        <label for="testimonio-3" class="arrow-btn">&#10094;</label>
+                        <label for="testimonio-2" class="arrow-btn">&#10095;</label>
+                    </div>
+
+                    <div class="testimonios-arrows arrows-slide-2">
+                        <label for="testimonio-1" class="arrow-btn">&#10094;</label>
+                        <label for="testimonio-3" class="arrow-btn">&#10095;</label>
+                    </div>
+
+                    <div class="testimonios-arrows arrows-slide-3">
+                        <label for="testimonio-2" class="arrow-btn">&#10094;</label>
+                        <label for="testimonio-1" class="arrow-btn">&#10095;</label>
+                    </div>
+
+                    <div class="testimonios-dots">
+                        <label for="testimonio-1"></label>
+                        <label for="testimonio-2"></label>
+                        <label for="testimonio-3"></label>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
         <div class="footer-content">
-            <p class="text-sm">&copy; 2024 Turismo. Todos los derechos reservados.</p>
-            <ul>
-                <li class="text-sm"><a href="#">Política de Privacidad</a></li>
-                <li class="text-sm"><a href="#">Términos y Condiciones</a></li>
-                <li class="text-sm"><a href="#">Contacto</a></li>
-            </ul>
+
+            <div class="footer-newsletter">
+                <h3 class="h5">Suscribete al newsletter</h3>
+                <p class="text-sm">Recibe novedades, ofertas y recomendaciones de destinos para tu proximo viaje.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electronico" aria-label="Correo electronico">
+                    <button type="submit">Suscribirme</button>
+                </form>
+            </div>
+
+            <div class="footer-social">
+                <h3 class="h5">Siguenos</h3>
+                <ul class="social-links">
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                    <li><a href="https://www.x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+                </ul>
+
+                <ul class="footer-links">
+                    <li class="text-sm"><a href="#">Politica de Privacidad</a></li>
+                    <li class="text-sm"><a href="#">Terminos y Condiciones</a></li>
+                    <li class="text-sm"><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-map">
+                <h3 class="h5">Encuentranos</h3>
+                <div class="map-embed">
+                    <iframe
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-58.405%2C-34.615%2C-58.365%2C-34.585&layer=mapnik&marker=-34.6%2C-58.385"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa de ubicacion">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <h3 class="h5">Informacion</h3>
+                <p class="text-sm">&copy; 2024 Turismo. Todos los derechos reservados.</p>
+                <p class="text-sm">Inspiramos viajes, conectamos destinos y acercamos nuevas experiencias para cada viajero.</p>
+            </div>
         </div>
     </footer>
 

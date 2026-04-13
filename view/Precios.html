@@ -9,25 +9,27 @@
 <body>
     <header>
         <div class="contenedor-nav">
-            <div class="logo">Turismo</div>
+            <div class="logo"><img src="../assets/img/logo.jpg" alt="Logo de Turismo"></div>
             
-            <!-- Checkbox oculto para controlar el menú (CSS puro) -->
+            <!-- Checkbox oculto para controlar el menu (CSS puro) -->
             <input type="checkbox" id="menuToggle" class="menu-toggle">
             
-            <!-- Label que actúa como botón hamburguesa -->
+            <!-- Label que actua como boton hamburguesa -->
             <label for="menuToggle" class="menu-hamburguesa">
                 <span></span>
                 <span></span>
                 <span></span>
             </label>
             
-            <!-- Navegación responsive -->
+            <!-- Navegacion responsive -->
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="Principal.html">Principal</a></li>
+                    <li><a href="Principal.html">Inicio</a></li>
                     <li><a href="Destinos.html">Destinos</a></li>
                     <li><a href="Agencias.html">Agencias</a></li>
                     <li><a href="Precios.html">Precios</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
                 </ul>
             </nav>
         </div>
@@ -35,19 +37,153 @@
     
     <main>
         <section class="contenido">
-            <h1 class="h1">Precios</h1>
-            <!-- Contenido de precios irá aquí -->
+            <div class="section-container">
+                <h1 class="h1">Precios</h1>
+                <p class="text-base section-intro">Compara opciones de viaje segun destino, tipo de experiencia y beneficios incluidos. La tabla mantiene el mismo comportamiento responsive que la pagina de destinos para una lectura comoda en desktop y mobile.</p>
+
+                <div class="precios-resumen">
+                    <div class="precio-highlight">
+                        <p class="text-sm">Mejor equilibrio</p>
+                        <h2 class="h3">Mendoza Gourmet</h2>
+                        <p class="text-base">Ideal para quienes buscan gastronomia, bodegas y una escapada de 4 dias con servicios incluidos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="precios-tabla-section">
+            <div class="section-container">
+                <h2 class="h2">Comparador de destinos</h2>
+                <p class="text-base section-intro">Pasa el cursor sobre cada fila para resaltarla y usa los iconos de informacion para ver detalles del servicio incluido.</p>
+
+                <div class="tabla-responsive">
+                    <table class="tabla-destinos tabla-precios">
+                        <thead>
+                            <tr>
+                                <th>Destino</th>
+                                <th>Categoria</th>
+                                <th>Duracion</th>
+                                <th>Incluye</th>
+                                <th>Precio desde</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Destino">Buenos Aires</td>
+                                <td data-label="Categoria">Cultural</td>
+                                <td data-label="Duracion">3 dias</td>
+                                <td data-label="Incluye">
+                                    City pass
+                                    <span class="tooltip-wrap">
+                                        <span class="tooltip-icon">i</span>
+                                        <span class="tooltip-box">Incluye acceso ilimitado a transporte turistico y entrada a 3 museos.</span>
+                                    </span>
+                                </td>
+                                <td data-label="Precio desde">$180.000</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Destino">Patagonia</td>
+                                <td data-label="Categoria">Naturaleza</td>
+                                <td data-label="Duracion">5 dias</td>
+                                <td data-label="Incluye">
+                                    Excursiones
+                                    <span class="tooltip-wrap">
+                                        <span class="tooltip-icon">i</span>
+                                        <span class="tooltip-box">Incluye 2 excursiones guiadas, traslados y acceso a senderos principales.</span>
+                                    </span>
+                                </td>
+                                <td data-label="Precio desde">$420.000</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Destino">Costa Atlantica</td>
+                                <td data-label="Categoria">Sol y playa</td>
+                                <td data-label="Duracion">4 dias</td>
+                                <td data-label="Incluye">
+                                    Hotel + playa
+                                    <span class="tooltip-wrap">
+                                        <span class="tooltip-icon">i</span>
+                                        <span class="tooltip-box">Incluye hospedaje, desayuno y acceso a balneario con sombrilla.</span>
+                                    </span>
+                                </td>
+                                <td data-label="Precio desde">$230.000</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Destino">Mendoza</td>
+                                <td data-label="Categoria">Gastronomico</td>
+                                <td data-label="Duracion">4 dias</td>
+                                <td data-label="Incluye">
+                                    Bodega tour
+                                    <span class="tooltip-wrap">
+                                        <span class="tooltip-icon">i</span>
+                                        <span class="tooltip-box">Incluye degustacion, visita a bodega y traslado compartido.</span>
+                                    </span>
+                                </td>
+                                <td data-label="Precio desde">$310.000</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Destino">Lujan</td>
+                                <td data-label="Categoria">Religioso</td>
+                                <td data-label="Duracion">2 dias</td>
+                                <td data-label="Incluye">
+                                    Recorrido guiado
+                                    <span class="tooltip-wrap">
+                                        <span class="tooltip-icon">i</span>
+                                        <span class="tooltip-box">Incluye visita guiada a basilica y circuito historico del centro.</span>
+                                    </span>
+                                </td>
+                                <td data-label="Precio desde">$95.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </section>
     </main>
     
     <footer>
         <div class="footer-content">
-            <p class="text-sm">&copy; 2024 Turismo. Todos los derechos reservados.</p>
-            <ul>
-                <li><a href="#">Política de Privacidad</a></li>
-                <li><a href="#">Términos y Condiciones</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
+            <div class="footer-newsletter">
+                <h3 class="h5">Suscribete al newsletter</h3>
+                <p class="text-sm">Recibe novedades, ofertas y recomendaciones de destinos para tu proximo viaje.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electronico" aria-label="Correo electronico">
+                    <button type="submit">Suscribirme</button>
+                </form>
+            </div>
+
+            <div class="footer-social">
+                <h3 class="h5">Siguenos</h3>
+                <ul class="social-links">
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                    <li><a href="https://www.x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+                </ul>
+
+                <ul class="footer-links">
+                    <li class="text-sm"><a href="#">Politica de Privacidad</a></li>
+                    <li class="text-sm"><a href="#">Terminos y Condiciones</a></li>
+                    <li class="text-sm"><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-map">
+                <h3 class="h5">Encuentranos</h3>
+                <div class="map-embed">
+                    <iframe
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-58.405%2C-34.615%2C-58.365%2C-34.585&layer=mapnik&marker=-34.6%2C-58.385"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa de ubicacion">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <h3 class="h5">Informacion</h3>
+                <p class="text-sm">&copy; 2024 Turismo. Todos los derechos reservados.</p>
+                <p class="text-sm">Inspiramos viajes, conectamos destinos y acercamos nuevas experiencias para cada viajero.</p>
+            </div>
         </div>
     </footer>
 </body>
