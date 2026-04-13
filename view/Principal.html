@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turismo - Mega Menu</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+
+<body class="page-inicio">
 
     <header>
         <div class="contenedor-nav">
             <div class="logo"><img src="../assets/img/logo.jpg" alt="Logo de Turismo"></div>
-            
+
             <!-- Checkbox oculto para controlar el menu (CSS puro) -->
             <input type="checkbox" id="menuToggle" class="menu-toggle">
-            
+
             <!-- Label que actua como boton hamburguesa -->
             <label for="menuToggle" class="menu-hamburguesa">
                 <span></span>
                 <span></span>
                 <span></span>
             </label>
-            
+
             <!-- Navegacion responsive -->
             <nav class="nav-menu">
                 <ul>
@@ -31,22 +33,18 @@
                     <li><a href="Precios.html">Precios</a></li>
                     <li><a href="Blog.html">Blog</a></li>
                     <li><a href="Contacto.html">Contacto</a></li>
+                    <li> <button type="button" class="theme-toggle" id="dark-mode-toggle" aria-pressed="false"
+                            aria-label="Activar modo oscuro">Modo oscuro</button></li>
                 </ul>
             </nav>
-            <button type="button" class="theme-toggle" id="dark-mode-toggle" aria-pressed="false" aria-label="Activar modo oscuro">Modo oscuro</button>
+
         </div>
     </header>
 
     <main>
         <section class="hero">
             <!-- Video de fondo con autoplay, loop y sin controles -->
-            <video
-                class="video-background"
-                autoplay
-                loop
-                muted
-                playsinline
-                disablepictureinpicture
+            <video class="video-background" autoplay loop muted playsinline disablepictureinpicture
                 disableremoteplayback>
                 <source src="https://www.elcalafate.tur.ar/img/img-bnn/timelaps.mp4" type="video/mp4">
                 Tu navegador no soporta el elemento video.
@@ -54,7 +52,8 @@
 
             <div class="video-content">
                 <h1 class="h1">Descubre destinos unicos para tu proxima aventura</h1>
-                <p class="text-base">Explora paisajes inolvidables, experiencias nuevas y lugares pensados para cada tipo de viajero.</p>
+                <p class="text-base">Explora paisajes inolvidables, experiencias nuevas y lugares pensados para cada
+                    tipo de viajero.</p>
                 <a href="Destinos.html" class="btn-hero">Ver destinos</a>
             </div>
         </section>
@@ -62,19 +61,23 @@
         <section class="destacados">
             <div class="section-container">
                 <h2 class="h2">Destinos destacados</h2>
-                <p class="text-base section-intro">Una seleccion pensada para viajeros que buscan naturaleza, cultura y experiencias memorables.</p>
+                <p class="text-base section-intro">Una seleccion pensada para viajeros que buscan naturaleza, cultura y
+                    experiencias memorables.</p>
 
                 <div class="destacados-grid">
                     <article class="destino-card">
-                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Paisaje de montanas y lago en la Patagonia">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80"
+                            alt="Paisaje de montanas y lago en la Patagonia">
                         <div class="destino-card-content">
                             <h3 class="h4">Patagonia</h3>
-                            <p class="text-sm">Glaciares, senderos y panoramas inmensos para una escapada inolvidable.</p>
+                            <p class="text-sm">Glaciares, senderos y panoramas inmensos para una escapada inolvidable.
+                            </p>
                         </div>
                     </article>
 
                     <article class="destino-card">
-                        <img src="https://media.todojujuy.com/p/68dd7f953ad2426be7d2b35cd547064c/adjuntos/227/imagenes/001/353/0001353180/jujuy-y-el-turismo.jpg" alt="Cataratas rodeadas de selva en Iguazu">
+                        <img src="https://media.todojujuy.com/p/68dd7f953ad2426be7d2b35cd547064c/adjuntos/227/imagenes/001/353/0001353180/jujuy-y-el-turismo.jpg"
+                            alt="Cataratas rodeadas de selva en Iguazu">
                         <div class="destino-card-content">
                             <h3 class="h4">Norte</h3>
                             <p class="text-sm">Pueblos coloridos con paisajes únicos y una ricos tradición cultural.</p>
@@ -82,10 +85,12 @@
                     </article>
 
                     <article class="destino-card">
-                        <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=900&q=80" alt="Montanas de colores en el norte argentino">
+                        <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=900&q=80"
+                            alt="Montanas de colores en el norte argentino">
                         <div class="destino-card-content">
                             <h3 class="h4">Cuyo Argentino</h3>
-                            <p class="text-sm">Zonas vitivinícolas con paisajes espectaculares y una rica tradición en la producción de vinos.</p>
+                            <p class="text-sm">Zonas vitivinícolas con paisajes espectaculares y una rica tradición en
+                                la producción de vinos.</p>
                         </div>
                     </article>
                 </div>
@@ -125,7 +130,8 @@
         <section class="testimonios">
             <div class="section-container">
                 <h2 class="h2">Testimonios</h2>
-                <p class="text-base section-intro">Historias reales de viajeros que encontraron inspiracion, organizacion y destinos inolvidables para su proxima escapada.</p>
+                <p class="text-base section-intro">Historias reales de viajeros que encontraron inspiracion,
+                    organizacion y destinos inolvidables para su proxima escapada.</p>
 
                 <div class="testimonios-carrusel">
                     <input type="radio" name="testimonio-slide" id="testimonio-1" checked>
@@ -134,7 +140,8 @@
 
                     <div class="testimonios-track">
                         <article class="testimonio-card">
-                            <p class="text-base">"La experiencia fue excelente. Todo estuvo muy bien organizado y los paisajes fueron increibles."</p>
+                            <p class="text-base">"La experiencia fue excelente. Todo estuvo muy bien organizado y los
+                                paisajes fueron increibles."</p>
                             <div class="testimonio-persona">
                                 <img src="https://i.pravatar.cc/120?img=32" alt="Foto de perfil de Lucia">
                                 <div>
@@ -145,7 +152,8 @@
                         </article>
 
                         <article class="testimonio-card">
-                            <p class="text-base">"Encontramos destinos hermosos y una propuesta clara para planear nuestro viaje sin complicaciones."</p>
+                            <p class="text-base">"Encontramos destinos hermosos y una propuesta clara para planear
+                                nuestro viaje sin complicaciones."</p>
                             <div class="testimonio-persona">
                                 <img src="https://i.pravatar.cc/120?img=15" alt="Foto de perfil de Martin">
                                 <div>
@@ -156,7 +164,8 @@
                         </article>
 
                         <article class="testimonio-card">
-                            <p class="text-base">"El sitio inspira a viajar. Las recomendaciones y la presentacion de cada lugar nos encantaron."</p>
+                            <p class="text-base">"El sitio inspira a viajar. Las recomendaciones y la presentacion de
+                                cada lugar nos encantaron."</p>
                             <div class="testimonio-persona">
                                 <img src="https://i.pravatar.cc/120?img=47" alt="Foto de perfil de Camila">
                                 <div>
@@ -207,7 +216,8 @@
             <div class="footer-social">
                 <h3 class="h5">Siguenos</h3>
                 <ul class="social-links">
-                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    </li>
                     <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
                     <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a></li>
                     <li><a href="https://www.x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
@@ -225,9 +235,7 @@
                 <div class="map-embed">
                     <iframe
                         src="https://www.openstreetmap.org/export/embed.html?bbox=-58.405%2C-34.615%2C-58.365%2C-34.585&layer=mapnik&marker=-34.6%2C-58.385"
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        title="Mapa de ubicacion">
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de ubicacion">
                     </iframe>
                 </div>
             </div>
@@ -235,11 +243,13 @@
             <div class="footer-bottom">
                 <h3 class="h5">Informacion</h3>
                 <p class="text-sm">&copy; 2024 Turismo. Todos los derechos reservados.</p>
-                <p class="text-sm">Inspiramos viajes, conectamos destinos y acercamos nuevas experiencias para cada viajero.</p>
+                <p class="text-sm">Inspiramos viajes, conectamos destinos y acercamos nuevas experiencias para cada
+                    viajero.</p>
             </div>
         </div>
     </footer>
 
     <script src="../js/dark-mode.js"></script>
 </body>
+
 </html>
