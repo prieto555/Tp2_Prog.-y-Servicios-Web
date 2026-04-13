@@ -17,8 +17,6 @@ body {
     min-height: 100vh;
 }
 
-/* ===== CLASES GLOBALES DE TIPOGRAFÍA RESPONSIVA ===== */
-
 /* Títulos H1 */
 .h1 {
     font-size: 36px;
@@ -1997,5 +1995,321 @@ footer {
     .blog-comment {
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+
+/* ===== ESTILOS PARA FORMULARIO DE CONTACTO ===== */
+
+.contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.formulario-contacto-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 60vh;
+}
+
+.formulario-contacto {
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(10, 26, 47, 0.12);
+    padding: 40px;
+    margin: 20px 0;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #0a1a2f;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 16px;
+    border: 1px solid #d4e3ef;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #0a1a2f;
+    background-color: white;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #00c3ff;
+    box-shadow: 0 0 0 3px rgba(0, 195, 255, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group select::placeholder,
+.form-group textarea::placeholder {
+    color: #999;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group-full {
+    grid-column: span 2;
+}
+
+.checkbox-group {
+    flex-direction: row !important;
+    align-items: center;
+    gap: 12px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: #00c3ff;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.validacion-mensaje {
+    font-size: 12px;
+    color: #e74c3c;
+    margin-top: 4px;
+    display: none;
+}
+
+.contador-caracteres {
+    font-size: 12px;
+    color: #666;
+    margin-top: 4px;
+    text-align: right;
+}
+
+.form-acciones {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.btn-enviar,
+.btn-limpiar {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-enviar {
+    background-color: #00c3ff;
+    color: #0a1a2f;
+}
+
+.btn-enviar:hover {
+    background-color: white;
+    color: #0a1a2f;
+    transform: translateY(-2px);
+}
+
+.btn-limpiar {
+    background-color: #f4f4f4;
+    color: #0a1a2f;
+}
+
+.btn-limpiar:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.btn-texto {
+    position: relative;
+    z-index: 1;
+}
+
+.spinner {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00c3ff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.spinner::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0a1a2f;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.btn-enviar.loading .btn-texto {
+    opacity: 0;
+}
+
+.btn-enviar.loading .spinner {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modal de confirmación */
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(10, 26, 47, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 1000;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal:target {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.modal-contenido {
+    background-color: white;
+    border-radius: 18px;
+    padding: 40px 32px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(10, 26, 47, 0.2);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal:target .modal-contenido {
+    transform: scale(1);
+}
+
+.modal-icono {
+    margin-bottom: 20px;
+}
+
+.modal-icono svg {
+    width: 64px;
+    height: 64px;
+    color: #00c3ff;
+}
+
+.btn-modal {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 24px;
+    background-color: #00c3ff;
+    color: #0a1a2f;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-modal:hover {
+    background-color: white;
+    transform: translateY(-2px);
+}
+
+/* Responsive para formulario */
+@media (max-width: 768px) {
+    .contenido {
+        padding: 20px 15px;
+    }
+
+    .formulario-contacto {
+        padding: 24px 20px;
+        margin: 10px 0;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .form-group-full {
+        grid-column: span 1;
+    }
+
+    .form-acciones {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-enviar,
+    .btn-limpiar {
+        width: 100%;
+    }
+
+    .modal-contenido {
+        padding: 32px 24px;
+    }
+}
+
+@media (max-width: 576px) {
+    .formulario-contacto {
+        padding: 20px 16px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .btn-enviar,
+    .btn-limpiar {
+        padding: 12px 20px;
+        font-size: 14px;
     }
 }

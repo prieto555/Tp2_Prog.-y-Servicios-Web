@@ -32,6 +32,9 @@
                     <li><a href="Contacto.html">Contacto</a></li>
                 </ul>
             </nav>
+            
+            <!-- Botón Dark Mode -->
+            <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Alternar modo oscuro">🌙</button>
         </div>
     </header>
     
@@ -186,5 +189,25 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const toggle = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+        
+        // Cargar preferencia guardada
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            body.classList.add('dark-mode');
+            toggle.textContent = '☀️';
+        }
+        
+        // Alternar modo
+        toggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            toggle.textContent = isDark ? '☀️' : '🌙';
+            localStorage.setItem('dark-mode', isDark ? 'enabled' : 'disabled');
+        });
+    </script>
+
 </body>
 </html>
