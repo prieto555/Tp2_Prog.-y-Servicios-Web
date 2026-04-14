@@ -141,9 +141,43 @@ header.header-scrolled {
     box-shadow: 0 10px 24px rgba(10, 26, 47, 0.18);
 }
 
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
 .logo img {
-    width: 12%;
-    border-radius: 100%;
+    width: 56px;
+    height: 56px;
+    border-radius: 18px;
+    box-shadow: 0 12px 24px rgba(4, 18, 32, 0.22);
+}
+
+.logo-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.logo-title {
+    font-size: 1.08rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #f5fcff;
+    line-height: 1;
+}
+
+.logo-tagline {
+    font-size: 0.76rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(223, 248, 255, 0.72);
+    line-height: 1.2;
 }
 
 nav ul {
@@ -642,8 +676,22 @@ footer {
         font-size: 10px;
     }
 
+    .logo {
+        gap: 10px;
+    }
+
     .logo img {
         width: 50px;
+        height: 50px;
+    }
+
+    .logo-title {
+        font-size: 0.95rem;
+    }
+
+    .logo-tagline {
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
     }
 
     .menu-hamburguesa {
@@ -683,6 +731,22 @@ footer {
         max-width: 420px;
         margin: 18px auto 0;
         flex-direction: column;
+    }
+}
+
+@media (max-width: 520px) {
+    .logo-tagline {
+        display: none;
+    }
+
+    .logo-title {
+        font-size: 0.88rem;
+        letter-spacing: 0.03em;
+    }
+
+    .logo img {
+        width: 46px;
+        height: 46px;
     }
 }
 
@@ -1018,7 +1082,7 @@ footer {
     }
 
     .section-container {
-        padding: 60px 20px;
+        padding: 10px 20px;
     }
 
     .destacados-grid {
@@ -1416,6 +1480,35 @@ footer {
         color: #0a1a2f;
         width: 34%;
         line-height: 1.4;
+    }
+
+    body.dark-mode .tabla-responsive {
+        background: transparent;
+        box-shadow: none;
+    }
+
+    body.dark-mode .tabla-destinos tbody tr {
+        background: linear-gradient(180deg, #101b2c 0%, #0d1727 100%);
+        border-color: rgba(122, 223, 255, 0.18);
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+    }
+
+    body.dark-mode .tabla-destinos td {
+        color: #e7eef7;
+        border-bottom-color: rgba(122, 223, 255, 0.12);
+        padding-left: 46%;
+    }
+
+    body.dark-mode .tabla-destinos td::before {
+        color: #8fe7ff;
+        font-size: 0.78rem;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    }
+
+    body.dark-mode .tabla-destinos td:last-child {
+        color: #b7f2ff;
+        font-weight: 700;
     }
 }
 
@@ -2676,5 +2769,9 @@ body.dark-mode .map-embed iframe {
 }
 
 body.dark-mode .logo img {
-    box-shadow: 0 0 0 2px rgba(122, 223, 255, 0.12);
+    box-shadow: 0 0 0 2px rgba(122, 223, 255, 0.12), 0 14px 28px rgba(0, 0, 0, 0.35);
+}
+
+body.dark-mode .logo-tagline {
+    color: rgba(158, 232, 255, 0.76);
 }
