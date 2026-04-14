@@ -1,5 +1,8 @@
 ﻿# Tp2_Prog.-y-Servicios-Web
 
+## Video explicando funciones implementadas
+https://drive.google.com/file/d/1X41Je15r3AYdxVafAxxsupVLyNX7Ttbs/view?usp=sharing
+
 ## Documentacion tecnica
 
 ### 1. Descripcion general
